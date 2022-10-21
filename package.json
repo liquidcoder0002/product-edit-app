@@ -1,0 +1,25 @@
+{
+  "name": "product-edit-app",
+  "version": "1.0.0",
+  "main": "web/index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy"
+  },
+  "dependencies": {
+    "@shopify/app": "3.14.0",
+    "@shopify/cli": "3.14.0",
+    "axios": "^0.27.2",
+    "ejs": "^3.1.8",
+    "express": "^5.0.0-alpha.8",
+    "mongoose": "^6.6.2"
+  },
+  "author": "dhruv",
+  "description": "This is a template for building a [Shopify app](https://shopify.dev/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.",
+  "keywords": []
+}
