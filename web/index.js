@@ -145,6 +145,17 @@ app.get('/api/product1-grapgql', async (req, res) => {
             id
             title
             handle
+            productCategory {
+              productTaxonomyNode {
+                name
+              }
+            }
+            vendor
+             variants(first: 10) {
+        nodes {
+          price
+        }
+      }
             resourcePublicationOnCurrentPublication {
               publication {
                 name

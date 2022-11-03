@@ -59,7 +59,7 @@ const ProFetch = () => {
       
     });
     console.log(res.data.body.data.products.edges)
-    setCount(res.data.body.data.products.edges)
+    // setCount(res.data.body.data.products.edges)
     
   };
 
@@ -78,20 +78,20 @@ const ProFetch = () => {
     const nextLink = res1.data[1].link
     console.log('links===========>',nextLink.includes("previous"))
     console.log('links vv===========>',nextLink)
-    if(nextLink.includes("previous") == true){
-      console.log("if prev",nextLink.split(",")[1].split(";")[0].split("<")[1].split(">")[0].split("&")[1]);
-      setnextL(nextLink.split(",")[1].split(";")[0].split("<")[1].split(">")[0].split("&")[1])
+    // if(nextLink.includes("previous") == true){
+    //   console.log("if prev",nextLink.split(",")[1].split(";")[0].split("<")[1].split(">")[0].split("&")[1]);
+    //   setnextL(nextLink.split(",")[1].split(";")[0].split("<")[1].split(">")[0].split("&")[1])
       
-    }else{
-        console.log("if next",nextLink.split(";")[0].split("<")[1].split(">")[0].split("&")[1])
-        setnextL(nextLink.split(";")[0].split("<")[1].split(">")[0].split("&")[1])
-    }
+    // }else{
+    //     console.log("if next",nextLink.split(";")[0].split("<")[1].split(">")[0].split("&")[1])
+    //     setnextL(nextLink.split(";")[0].split("<")[1].split(">")[0].split("&")[1])
+    // }
 
-    if(nextLink.includes("previous") == true ){
-      console.log("if prev linkkkk===>",nextLink.split(",")[1].split(";")[0].split("<")[1].split(">")[0].split("&")[1]);
+    // if(nextLink.includes("previous") == true ){
+    //   console.log("if prev linkkkk===>",nextLink.split(",")[1].split(";")[0].split("<")[1].split(">")[0].split("&")[1]);
 
-      setprevL(nextLink.split(";")[0].split("<")[1].split(">")[0].split("&")[1])
-    }
+    //   setprevL(nextLink.split(";")[0].split("<")[1].split(">")[0].split("&")[1])
+    // }
 
     // if(nextLink.includes(`next`) == true){
     //   setnextL(nextLink.split(";")[0].split("<")[1].split(">")[0].split("&")[1])
@@ -368,15 +368,15 @@ const updateData = {input1}
                     <TextStyle variation="strong">{node.title}</TextStyle>
                   </h3>
                   <h3>
-                    <TextStyle variation="strong">{node.title}</TextStyle>
+                    <TextStyle variation="strong">{node.vendor}</TextStyle>
                   </h3>
                   <h6>
                     <TextStyle variation="strong">
-                      {/* ${node.variants[0]?.price} */}
+                      ${node.variants.nodes[0].price}
                     </TextStyle>
                   </h6>
                   <h6>
-                    <TextStyle variation="strong">{node.id}</TextStyle>
+                    <TextStyle variation="strong">$ {node.variants.nodes[0].price}</TextStyle>
                   </h6>
 
                   <div

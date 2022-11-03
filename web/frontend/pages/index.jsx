@@ -14,12 +14,15 @@ import { trophyImage } from "../assets";
 
 import { ProductsCard } from "../components";
 import ProFetch from "../components/ProFetch";
+import Loginform from "../components/Loginform";
+
 
 export default function HomePage() {
   return (
     <Page narrowWidth>
       <TitleBar title="App name" primaryAction={null} />
             <ProFetch/>
+            {/* <Loginform/> */}
       <Layout>
         <Layout.Section>
           {/* <Card sectioned>
@@ -78,6 +81,8 @@ export default function HomePage() {
               </Stack.Item>
             </Stack>
           </Card> */}
+
+          
         </Layout.Section>
         <Layout.Section>
           <ProductsCard />
